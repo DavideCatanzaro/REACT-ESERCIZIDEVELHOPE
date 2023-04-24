@@ -1,8 +1,13 @@
-import './App.css';
-
+import { Welcome } from './Props-Passing`name`prop';
+import {Hello} from './esercizio1';
+import { Welcome2 } from './Props-Defaultvalue';
 function App() {
   return (
-    <div></div>
+    <div>
+      <Hello />
+      <Welcome name={"Jimmy"}/>
+      <Welcome2 />
+    </div>
   );
 }
 
