@@ -1,6 +1,6 @@
 import { Welcome } from './Props-Passing`name`prop';
 import {Hello} from './esercizio1';
-import { Welcome2 } from './ConditionalRendering-Iflessthan`65`';
+import { Welcome2 } from './ConditionalRendering-IfisequaltoJohn';
 import { WelcomeAge } from './Props-Secondprop';
 
 function App() {
