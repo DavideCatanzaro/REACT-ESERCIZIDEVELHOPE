@@ -1,6 +1,6 @@
 import { Welcome } from './Props-Passing`name`prop';
 import {Hello} from './esercizio1';
-import { Welcome2 } from './ConditionalRendering-Ifpropispresent';
+import { Welcome2 } from './ConditionalRendering-Iflessthan`65`';
 import { WelcomeAge } from './Props-Secondprop';
 
 function App() {
@@ -8,8 +8,9 @@ function App() {
     <div>
       <Hello />
       <Welcome name={<strong>Jimmy</strong>}/>
-      <Welcome2 age={20}/>
+      <Welcome2 age={65}/>
       <WelcomeAge  name={"DADO"} age={22} />
+      
     </div>
   );
 }

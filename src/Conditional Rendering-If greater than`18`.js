@@ -1,10 +1,11 @@
 import React from "react";
-import { Age } from "./Props-Extract message";
+import { Age } from "./Props-Extractmessage";
 
 function WelcomeConditional({props}) {
   return (
     <div>
-      Hello {props.name}!{props.age > 18 ? <Age age={props.age} /> : null}
+      <p>Hello {props.name}!</p>
+      {props.age > 18 ? <Age age={props.age} /> : null}
     </div>
   );
 }
