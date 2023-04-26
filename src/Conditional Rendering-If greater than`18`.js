@@ -8,4 +8,4 @@ function WelcomeConditional({props}) {
     </div>
   );
 }
-export default WelcomeConditional({props});
+export default WelcomeConditional;
