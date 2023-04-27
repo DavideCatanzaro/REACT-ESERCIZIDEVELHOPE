@@ -4,6 +4,7 @@ import { Welcome2 } from './ConditionalRendering-IfisequaltoJohn';
 import { WelcomeAge } from './Props-Secondprop';
 import { Counter } from './CreateACounterClassComponent';
 import { Counter2 } from './CounterProps';
+import { Counter3 } from './CounterWithComponentDidMount';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <WelcomeAge  name={"DADO"} age={22} />
       <Counter />
       <Counter2 initialValue={2} incrementBy={2}/>
+      <Counter3 />
     </div>
   );
 }
