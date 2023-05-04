@@ -9,6 +9,7 @@ import ClickCounter from './Events-ClickCounter';
 import ClickTracker from './Events-ClickTracker';
 import InteractiveWelcome from './InteractiveWelcomeComponent';
 import Login from './login';
+import Login2 from './resetLogIn';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <ClickTracker/>
       <InteractiveWelcome/>
       <Login/>
+      <Login2/>
     </div>
   );
 }
