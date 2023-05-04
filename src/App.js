@@ -6,6 +6,7 @@ import { Counter } from './CreateACounterClassComponent';
 import { Counter2 } from './CounterProps';
 import { Counter3 } from './CounterWithComponentDidMount';
 import ClickCounter from './Events-ClickCounter';
+import ClickTracker from './Events-ClickTracker';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Counter2 initialValue={2} incrementBy={2}/>
       <Counter3 />
       <ClickCounter/>
+      <ClickTracker/>
     </div>
   );
 }
