@@ -8,6 +8,7 @@ import { Counter3 } from './CounterWithComponentDidMount';
 import ClickCounter from './Events-ClickCounter';
 import ClickTracker from './Events-ClickTracker';
 import InteractiveWelcome from './InteractiveWelcomeComponent';
+import Login from './login';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <ClickCounter/>
       <ClickTracker/>
       <InteractiveWelcome/>
+      <Login/>
     </div>
   );
 }
