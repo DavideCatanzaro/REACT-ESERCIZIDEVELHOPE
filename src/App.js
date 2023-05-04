@@ -7,12 +7,12 @@ import { Counter2 } from './CounterProps';
 import { Counter3 } from './CounterWithComponentDidMount';
 import ClickCounter from './Events-ClickCounter';
 import ClickTracker from './Events-ClickTracker';
+import InteractiveWelcome from './InteractiveWelcomeComponent';
 
 function App() {
   return (
     <div>
       <Hello />
-      <Welcome name={<strong>Jimmy</strong>}/>
       <Welcome2 age={65}/>
       <WelcomeAge  name={"DADO"} age={22} />
       <Counter />
@@ -20,6 +20,7 @@ function App() {
       <Counter3 />
       <ClickCounter/>
       <ClickTracker/>
+      <InteractiveWelcome/>
     </div>
   );
 }
