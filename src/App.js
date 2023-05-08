@@ -11,6 +11,7 @@ import InteractiveWelcome from './InteractiveWelcomeComponent';
 import Login from './login';
 import Login2 from './resetLogIn';
 import UncontrolledLogin from './UncontrolledLogin'
+import TodoList from './TodoListComponent';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       {/* <Login/>
       <Login2/> */}
       <UncontrolledLogin/>
+      <TodoList/>
     </div>
   );
 }
