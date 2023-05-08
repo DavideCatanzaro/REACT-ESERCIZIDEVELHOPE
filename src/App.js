@@ -12,6 +12,8 @@ import Login from './login';
 import Login2 from './resetLogIn';
 import UncontrolledLogin from './UncontrolledLogin'
 import TodoList from './TodoListComponent';
+import AddTodo from './AddTodo';
+import AddTodo2 from './ResetToDo';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
       <Login2/> */}
       <UncontrolledLogin/>
       <TodoList/>
+      <AddTodo/>
+
     </div>
   );
 }
