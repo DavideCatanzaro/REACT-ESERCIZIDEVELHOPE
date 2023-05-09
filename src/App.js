@@ -18,6 +18,7 @@ import RemoveTodo from './removeToDo';
 import RemoveTodo2 from './ToDoRenderProps';
 import { CounterFunc } from './counterFunction';
 import  { CounterFunc2 } from './sideEffectCounter';
+import { GithubUser } from './GithubUser';
 
 function App() {
   return (
@@ -35,9 +36,9 @@ function App() {
       <Login2/> 
       <UncontrolledLogin/>
       <TodoList/> */}
-      <CounterFunc2/>
+      <CounterFunc/>
       <RemoveTodo2/>
-      
+      <GithubUser />
 
     </div>
   );
