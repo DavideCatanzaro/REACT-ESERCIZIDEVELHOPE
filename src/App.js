@@ -15,11 +15,13 @@ import TodoList from './TodoListComponent';
 import AddTodo from './AddTodo';
 import AddTodo2 from './ResetToDo';
 import RemoveTodo from './removeToDo';
+import RemoveTodo2 from './ToDoRenderProps';
+import { CounterFunc } from './counterFunction';
 
 function App() {
   return (
     <div>
-      <Hello />
+      {/* <Hello />
       <Welcome2 age={65}/>
       <WelcomeAge  name={"DADO"} age={22} />
       <Counter />
@@ -28,12 +30,12 @@ function App() {
       <ClickCounter/>
       <ClickTracker/>
       <InteractiveWelcome/>
-      {/* <Login/>
-      <Login2/> */}
+      <Login/>
+      <Login2/> 
       <UncontrolledLogin/>
-      <TodoList/>
-    
-      <RemoveTodo/>
+      <TodoList/> */}
+      <CounterFunc/>
+      <RemoveTodo2/>
 
     </div>
   );
