@@ -17,6 +17,7 @@ import AddTodo2 from './ResetToDo';
 import RemoveTodo from './removeToDo';
 import RemoveTodo2 from './ToDoRenderProps';
 import { CounterFunc } from './counterFunction';
+import  { CounterFunc2 } from './sideEffectCounter';
 
 function App() {
   return (
@@ -34,8 +35,9 @@ function App() {
       <Login2/> 
       <UncontrolledLogin/>
       <TodoList/> */}
-      <CounterFunc/>
+      <CounterFunc2/>
       <RemoveTodo2/>
+      
 
     </div>
   );
