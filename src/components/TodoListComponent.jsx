@@ -2,24 +2,59 @@ import React, { useState } from "react";
 
 function TodoList() {
   const [items, setItems] = useState([]);
+  const [inputValue, setInputValue] = useState("");
 
-  function addItem(event) {
+  const handleInput = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleAddItem = (event) => {
     event.preventDefault();
-    const newItem = event.target.elements.item.value;
-    setItems([...items, newItem]); 
-  }
+    const newItemValue = event.target.itemInput.value;
+    setItems([...items, newItemValue]);
+    setInputValue("");
+  };
+
+  const handleReset = () => {
+    setItems([]);
+    setInputValue("");
+  };
+
+  const handleRemove = (id) => {
+    const removeItems = [...items];
+    removeItems.splice(id, 1);
+    setItems(removeItems);
+  };
 
   return (
     <div>
-      <form onSubmit={addItem}>
-        <input type="text" name="item" />
-        <button type="submit">Add Item</button>
+      <form onSubmit={handleAddItem}>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleInput}
+          name="itemInput"
+        />
+        <button type="submit">Add</button>
       </form>
       <ul>
         {items.map((item) => (
-          <li>{item}</li>
+          <>
+            <li index={id}>{item}</li>
+            <button
+              type="click"
+              onClick={() => {
+                handleRemove(id);
+              }}
+            >
+              REMOVE
+            </button>
+          </>
         ))}
       </ul>
+      <button type="click" onClick={handleReset}>
+        RESET
+      </button>
     </div>
   );
 }
