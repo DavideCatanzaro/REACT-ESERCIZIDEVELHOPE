@@ -1,4 +1,5 @@
 import { LanguageContext } from "./LanguageContext";
+import GithubUser from "./components/CustomHook/GitHubUser";
 import DisplayLanguage from "./components/displayLanguage";
 import { useState } from "react";
 
@@ -12,13 +13,7 @@ function App() {
   
   return (
     <div>
-      <select onChange={handleChange} value={language}>
-        <option value='it'>ITALIANO</option>
-        <option value='en'>INGLESE</option>
-      </select>
-      <LanguageContext.Provider value={language}>
-        <DisplayLanguage />
-      </LanguageContext.Provider>
+      <GithubUser username='DavideCatanzaro'/>
     </div>
   );
 }
