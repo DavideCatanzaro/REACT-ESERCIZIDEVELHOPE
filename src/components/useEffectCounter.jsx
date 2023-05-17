@@ -1,46 +1,25 @@
-import { useState, useEffect } from "react"
+import { useCallback, useState } from "react"
 
 
-function Counter() {
+ const useCounter = () => {
+    const [count,setCount] = useState(0)
 
-    const [counter, setCount] = useState(0);
+    const increment = useCallback(() => {
+        setCount(count + 1)
+    },[count]) 
 
+    const decrement = useCallback(() => {
+        setCount(count - 1)
+    },[count]) 
+
+    const reset = useCallback(() => {
+        setCount(0)
+    },[count]) 
     
-    useEffect(() => {
-        console.log(`counter is mount`)
-        return () => {
-            console.log('counter is unmount')
-        }
-    }, [])
-
-
+    return{count,increment,decrement,reset}
     
-    useEffect(() => {
-        console.log(`the counter is ${counter}`);
-        return () => {
-            console.log(`the counter was ${counter}`);
-        }
-    }, [counter])
-
-    const increase = () => {
-        setCount(count => count + 1)
-    }
-
-    const decrease = () => {
-        if (counter > 0) {
-            setCount(count => count - 1);
-        }
-      };
-
-    
-
-
-
-    return <>
-            <h2>{counter}</h2>
-            <button onClick={increase}>INCREASE</button>
-            <button onClick={decrease}>DECREASE</button>
-            </>
 }
 
-export default Counter
+    
+
+export default useCounter;
