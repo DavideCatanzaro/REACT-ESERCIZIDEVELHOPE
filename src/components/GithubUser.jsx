@@ -19,6 +19,6 @@ export function GithubUser({username}) {
     },[username])
 
     return <div>
-        {data && <h1>{data.name}</h1>}
+        {data && <h1>{data.name}</h1> || <p>LOADING...</p>}
         </div>
 }

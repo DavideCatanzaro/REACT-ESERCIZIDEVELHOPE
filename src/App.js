@@ -6,6 +6,7 @@ import Filteredlist from "./components/FiltredList";
 import DisplayLanguage from "./components/displayLanguage";
 import { useState } from "react";
 import Counter from "./Counter";
+import ShowGithubUser from "./components/CustomHook/ShowGithubUser";
 
 function App() {
   
@@ -41,11 +42,12 @@ function App() {
 
   return (
     <div>
-      <GithubUser username='DavideCatanzaro'/>
+      {/* <GithubUser username='DavideCatanzaro'/>
       <CarDetails initialData={car}/>
-      <Filteredlist list={person}/>
+      <Filteredlist list={person}/> */}
       <Routes>
         <Route path="counter" element={<Counter />} />
+        <Route path="/users/:username" element={<ShowGithubUser />} />
       </Routes>
     </div>
   );
