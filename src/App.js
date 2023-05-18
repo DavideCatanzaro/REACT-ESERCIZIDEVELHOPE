@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { LanguageContext } from "./LanguageContext";
 import CarDetails from "./components/CarDetails";
 import GithubUser from "./components/CustomHook/GitHubUser";
@@ -7,6 +7,8 @@ import DisplayLanguage from "./components/displayLanguage";
 import { useState } from "react";
 import Counter from "./Counter";
 import ShowGithubUser from "./components/CustomHook/ShowGithubUser";
+import { Hello } from "./components/esercizio1";
+import Login from "./components/login";
 
 function App() {
   
@@ -46,9 +48,16 @@ function App() {
       <CarDetails initialData={car}/>
       <Filteredlist list={person}/> */}
       <Routes>
+        <Route path="/" element={<Hello/>} />
         <Route path="counter" element={<Counter />} />
         <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="/ShowGithubUser" element={<ShowGithubUser />} />
+        <Route path="/login" element={<Login/>}/>
       </Routes>
+      <p><Link to="/counter">GO TO COUNTER</Link></p>
+      <p><Link to="/login"> LOGIN</Link></p>
+      <p><Link to="/ShowGithubUser"> Github</Link></p>
+      
     </div>
   );
 }
