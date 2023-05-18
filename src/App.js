@@ -1,9 +1,11 @@
+import { Route, Routes } from "react-router-dom";
 import { LanguageContext } from "./LanguageContext";
 import CarDetails from "./components/CarDetails";
 import GithubUser from "./components/CustomHook/GitHubUser";
 import Filteredlist from "./components/FiltredList";
 import DisplayLanguage from "./components/displayLanguage";
 import { useState } from "react";
+import Counter from "./Counter";
 
 function App() {
   
@@ -42,6 +44,9 @@ function App() {
       <GithubUser username='DavideCatanzaro'/>
       <CarDetails initialData={car}/>
       <Filteredlist list={person}/>
+      <Routes>
+        <Route path="counter" element={<Counter />} />
+      </Routes>
     </div>
   );
 }
