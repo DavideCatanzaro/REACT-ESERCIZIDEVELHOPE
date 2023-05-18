@@ -9,6 +9,7 @@ import Counter from "./Counter";
 import ShowGithubUser from "./components/CustomHook/ShowGithubUser";
 import { Hello } from "./components/esercizio1";
 import Login from "./components/login";
+import NotFound from "./components/NotFound";
 
 function App() {
   
@@ -53,6 +54,7 @@ function App() {
         <Route path="/users/:username" element={<ShowGithubUser />} />
         <Route path="/ShowGithubUser" element={<ShowGithubUser />} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
       <p><Link to="/counter">GO TO COUNTER</Link></p>
       <p><Link to="/login"> LOGIN</Link></p>
