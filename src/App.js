@@ -1,7 +1,7 @@
 import { Link, Route, Routes } from "react-router-dom";
 import { LanguageContext } from "./LanguageContext";
 import CarDetails from "./components/CarDetails";
-import GithubUser from "./components/CustomHook/GitHubUser";
+import GithubUser from "./components/SWRShowGithubUser";
 import Filteredlist from "./components/FiltredList";
 import DisplayLanguage from "./components/displayLanguage";
 import { useState } from "react";
@@ -62,7 +62,7 @@ function App() {
       <p><Link to="/login"> LOGIN</Link></p>
       <p><Link to="/ShowGithubUser"> Github</Link></p>
       <p><Link to="/user">Add a user and select it</Link></p>
-      
+        <GithubUser username={"DavideCatanzaro"}/>
     </div>
   );
 }
