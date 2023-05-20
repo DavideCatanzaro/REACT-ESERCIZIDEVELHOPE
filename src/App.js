@@ -10,6 +10,7 @@ import ShowGithubUser from "./components/CustomHook/ShowGithubUser";
 import { Hello } from "./components/esercizio1";
 import Login from "./components/login";
 import NotFound from "./components/NotFound";
+import RouteGithubUserList from "./components/GithubUserListRoute";
 
 function App() {
   
@@ -54,11 +55,13 @@ function App() {
         <Route path="/users/:username" element={<ShowGithubUser />} />
         <Route path="/ShowGithubUser" element={<ShowGithubUser />} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="/user" element={<RouteGithubUserList/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
       <p><Link to="/counter">GO TO COUNTER</Link></p>
       <p><Link to="/login"> LOGIN</Link></p>
       <p><Link to="/ShowGithubUser"> Github</Link></p>
+      <p><Link to="/user">Add a user and select it</Link></p>
       
     </div>
   );
