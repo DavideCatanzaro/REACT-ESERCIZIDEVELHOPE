@@ -1,18 +1,16 @@
 import {useGithubUser} from "./SWRGithubUsers"
 
 function GithubUser(props){
-    
-    const {data} = useGithubUser(props.username)
 
-    console.log(data)
+    const {data, onFetchData} = useGithubUser(props.username)
     
     return <div>
-        {data && ( 
-            <div>
+        <button onClick={onFetchData}>Fetch</button>
+        {data && <div>
                 <h3>{data.name}</h3>
                 <p>{data.login}</p>
             </div>
-        )}
+        }
     </div>
 }
 
